@@ -1,5 +1,3 @@
-let useCoc = 0
-
 call plug#begin('~/.vim/plugged')
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -13,27 +11,14 @@ Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
-if useCoc
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'nvim-lua/completion-nvim'
-    Plug 'ojroques/nvim-lspfuzzy', { 'branch': 'main' }
-endif
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+Plug 'ojroques/nvim-lspfuzzy', { 'branch': 'main' }
 call plug#end()
 
 runtime mappings.vim
+lua require('init')
 
-if useCoc
-    runtime lsp/coc.vim
-else
-    lua require('init')
-endif
-
-" Use <Tab> and <S-Tab> to navigate through popup menu
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
 " Avoid showing message extra message when using completion
