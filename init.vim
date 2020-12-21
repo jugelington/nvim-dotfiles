@@ -14,11 +14,16 @@ Plug 'vim-airline/vim-airline'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'ojroques/nvim-lspfuzzy', { 'branch': 'main' }
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 call plug#end()
 
 runtime mappings.vim
 lua require('init')
 
+" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
 " Avoid showing message extra message when using completion
