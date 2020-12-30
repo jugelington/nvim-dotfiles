@@ -13,9 +13,10 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
-Plug 'ojroques/nvim-lspfuzzy', { 'branch': 'main' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'RishabhRD/popfix'
+Plug 'RishabhRD/nvim-lsputils'
 call plug#end()
 
 runtime mappings.vim
