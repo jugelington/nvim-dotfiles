@@ -1,10 +1,11 @@
 require('packages')
 require('mappings')
 require('general_settings')
-require('lspconfig')
-require('treesitterconfig')
+require('lsp_settings')
+require('treesitter_settings')
 
 require'nvim-tree'.setup()
+require'telescope'.load_extension 'file_browser'
 
 require'null-ls'.setup({
     sources = {
