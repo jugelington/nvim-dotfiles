@@ -8,7 +8,7 @@ Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
 Plug 'rbong/vim-flog'
-Plug 'jose-elias-alvarez/null-ls.nvim'
+--Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'vim-test/vim-test'
 Plug('rcarriga/vim-ultest', { ['do'] = 'UpdateRemotePlugins' })
 Plug 'vim-airline/vim-airline'
