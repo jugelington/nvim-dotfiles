@@ -16,17 +16,16 @@ wo.number=true
 wo.relativenumber=true
 o.signcolumn='number'
 
-
 vim.cmd([[
-colorscheme torte
+colorscheme zellner
 let g:airline_theme='ayu_mirage'
 
-let test#strategy = "neovim"
+let test#strategy = "dispatch"
 let test#vim#term_position = "vert"
 let g:test#csharp#runner = 'dotnettest'
 let test#csharp#dotnettest#options = {
-    \   'nearest': '--filter "Category!=IntegrationTests"',
-    \   'file': '--filter "Category!=IntegrationTests"',
+    "\   'nearest': '--filter "Category!=IntegrationTests"',
+    "\   'file': '--filter "Category!=IntegrationTests"',
     \   'suite': '--filter "Category!=IntegrationTests"',
     \   'last': '--filter "Category!=IntegrationTests"',
     \   'visit': '--filter "Category!=IntegrationTests"',
@@ -34,7 +33,11 @@ let test#csharp#dotnettest#options = {
 
 
 let g:asyncomplete_auto_completeopt = 0
-set completeopt=menuone,noinsert,noselect,preview
+set completeopt=menu,menuone,noselect
 
 hi vertsplit ctermfg=1000
+
+let g:loaded_python_provider=0
+let g:python3_host_prog = '/usr/local/bin/python3'
+set pyxversion=3
 ]])

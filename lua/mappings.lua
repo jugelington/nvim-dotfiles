@@ -31,5 +31,7 @@ map('n', '<leader>l', ':TestLast<CR>')
 --map('n', '<leader>g', ':TestVisit<CR>')
 
 
+map('n', '<leader>el', ':ConjureEval<CR>')
+map('n', '<leader>eb', ':ConjureEvalFile<CR>')
 
 
